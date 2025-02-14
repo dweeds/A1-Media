@@ -1,24 +1,43 @@
 body {
     background-color: black;
     color: white;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 20px;
 }
 
 nav {
-    position: absolute !important;
+    position: fixed !important;
     width: 100%;
     z-index: 1;
+    background: #00000013;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .contact-banner {
-    padding-top: 200px;
-    height: 60vh;
-    background-image: url(static-img/banner-1.jpeg);
+
     background-size: cover;
-    background-position: 40% 60%;
     background-repeat: no-repeat;
-    -webkit-backdrop-filter: brightness(90%);
-    backdrop-filter: brightness(90%);
+    -webkit-backdrop-filter: brightness(100%);
+    backdrop-filter: brightness(100%);
 }
+
+.banner-1 {
+    background-image: url(static-img/banner-1.jpeg);
+    height: 50vh;
+    background-position: 40% 60%;
+    padding-top: 10px;
+}
+
+.banner-2 {
+    background-image: url(static-img/banner-2.jpeg);
+    height: 30vh;
+    background-position: 62% 38%;
+}
+
 .hidden {
     display: none;
 }
@@ -27,18 +46,31 @@ nav {
     position: relative;
     z-index: -1;
     height: 60vh;
-    background-image: url(static-img/banner-1.jpeg);
     background-size: cover;
-    background-position: 40% 60%;
     background-repeat: no-repeat;
     -webkit-backdrop-filter: brightness(90%);
     backdrop-filter: brightness(90%);
+}
+
+.top-banner-1 {
+    background-image: url(static-img/top-banner-1.jpeg);
+    background-position: 10% 90%;
+}
+.top-banner-2 {
+    background-image: url(static-img/top-banner-2.jpeg);
+    background-position: 10% 90%;
+}
+
+.top-banner-3 {
+    background-image: url(static-img/top-banner-3.jpeg);
+    background-position: 10% 90%;
 }
 
 .header-text {
     border: 5px solid white;
     padding: 2% 7%;
 }
+
 .topnav a {
     text-decoration: none;
     color: #FFF;
@@ -52,12 +84,15 @@ nav {
     border: 3px solid #FFF;
     color: #FFF;
 }
+
 .wrapper {
     display: none;
 }
+
 .mobile-reviews {
     display: none;
 }
+
 .mobile-video {
     display: none;
 }
@@ -83,6 +118,7 @@ nav {
     .mobile-reviews {
         display: block;
     }
+
     .reviews {
         display: none;
     }
@@ -99,10 +135,12 @@ nav {
         -webkit-backdrop-filter: brightness(90%);
         backdrop-filter: brightness(90%);
     }
+
     .topnav {
         display: none;
     }
-    .wrapper{
+
+    .wrapper {
         display: block;
         position: fixed;
         top: 0;
@@ -114,12 +152,14 @@ nav {
         /* clip-path: circle(25px at calc(0% + 45px) 45px); */
         clip-path: circle(0px at calc(100% - 45px) 45px);
         transition: all 0.3s ease-in-out;
-      }
-      #active:checked ~ .wrapper{
+    }
+
+    #active:checked~.wrapper {
         clip-path: circle(75%);
-      }
-      .menu-btn{
-        position: absolute;
+    }
+
+    .menu-btn {
+        position: fixed;
         z-index: 100;
         right: 20px;
         top: 10px;
@@ -132,14 +172,17 @@ nav {
         color: #fff;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-      }
-      #active:checked ~ .menu-btn{
+    }
+
+    #active:checked~.menu-btn {
         color: #000000;
-      }
-      #active:checked ~ .menu-btn i:before{
+    }
+
+    #active:checked~.menu-btn i:before {
         content: "\f00d";
-      }
-      .wrapper ul{
+    }
+
+    .wrapper ul {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -147,23 +190,27 @@ nav {
         transform: translate(-50%, -50%);
         list-style: none;
         text-align: center;
-      }
-      .wrapper ul li{
+        padding: 0 !important;
+    }
+
+    .wrapper ul li {
         margin: 0;
         padding: 0 !important;
-      }
-      .wrapper ul li a{
+    }
+
+    .wrapper ul li a {
         color: none;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 30px;
         font-weight: 500;
         padding: 5px 30px;
         color: #000000;
         position: relative;
-        line-height: 50px;
+        line-height: 30px;
         transition: all 0.3s ease;
-      }
-      .wrapper ul li a:after{
+    }
+
+    .wrapper ul li a:after {
         position: absolute;
         content: "";
         background: #fff;
@@ -174,15 +221,17 @@ nav {
         transform: scaleY(0);
         z-index: -1;
         transition: transform 0.3s ease;
-      }
-      .wrapper ul li a:hover:after{
-        transform: scaleY(1);
-      }
-      .wrapper ul li a:hover{
-        color: #4158d0;
-      }
-      input[type="checkbox"]{
-        display: none;
-      }
-  }
+    }
 
+    .wrapper ul li a:hover:after {
+        transform: scaleY(1);
+    }
+
+    .wrapper ul li a:hover {
+        color: #4158d0;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+}
