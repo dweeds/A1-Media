@@ -48,8 +48,6 @@ nav {
     height: 60vh;
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-backdrop-filter: brightness(90%);
-    backdrop-filter: brightness(90%);
 }
 
 .top-banner-1 {
@@ -99,10 +97,22 @@ nav {
 
 
 @media only screen and (max-width: 600px) {
+    .top-banner {
+        position: relative;
+        z-index: -1;
+        height: 40vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .header-text {
+        width: 70%;
+    }
     .laptop-video {
         display: none;
     }
-
+    video {
+        width: 100%;
+    }
     .mobile-video {
         display: block;
     }
