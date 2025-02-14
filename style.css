@@ -134,7 +134,7 @@ nav {
         transition: all 0.3s ease-in-out;
       }
       #active:checked ~ .menu-btn{
-        color: #ffffff;
+        color: #000000;
       }
       #active:checked ~ .menu-btn i:before{
         content: "\f00d";
