@@ -82,6 +82,11 @@ nav {
     border: 3px solid #FFF;
     color: #FFF;
 }
+.white-button:hover {
+    background-color: white;
+    border: 3px solid #fff;
+    color: #000000;
+}
 
 .wrapper {
     display: none;
