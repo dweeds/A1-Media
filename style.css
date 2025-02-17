@@ -3,8 +3,26 @@ body {
     color: white;
     text-transform: uppercase;
 }
+ul {
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Nunito Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
 
-p {
+p, a {
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     font-size: 20px;
 }
 
@@ -54,6 +72,7 @@ nav {
     background-image: url(static-img/top-banner-1.jpeg);
     background-position: 10% 90%;
 }
+
 .top-banner-2 {
     background-image: url(static-img/top-banner-2.jpeg);
     background-position: 10% 90%;
@@ -62,6 +81,14 @@ nav {
 .top-banner-3 {
     background-image: url(static-img/top-banner-3.jpeg);
     background-position: 10% 90%;
+}
+.top-banner-4 {
+    background-image: url(static-img/top-banner-5.jpeg);
+    background-position: 30% 70%;
+}
+.top-banner-5 {
+    background-image: url(static-img/top-banner-4.jpeg);
+    background-position: 30% 70%;
 }
 
 .header-text {
@@ -82,6 +109,7 @@ nav {
     border: 3px solid #FFF;
     color: #FFF;
 }
+
 .white-button:hover {
     background-color: white;
     border: 3px solid #fff;
@@ -100,8 +128,184 @@ nav {
     display: none;
 }
 
+.container-fluid {
+    padding: 0px 50px;
+}
+
+.header-video {
+    height: 60vh;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 894px) {
+
+    .header-text {
+        border: 5px solid white;
+        padding: 2% 3%;
+    }
+    .carousel {
+        z-index: -1;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Nunito Sans", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .top-banner {
+        height: 50vh;
+    }
+
+    .contact-banner {
+        padding-top: 50px;
+        height: 30vh;
+        position: relative;
+        z-index: -1;
+        background-size: cover;
+        background-position: 40% 60%;
+        background-repeat: no-repeat;
+        -webkit-backdrop-filter: brightness(90%);
+        backdrop-filter: brightness(90%);
+    }
+
+    .topnav {
+        display: none;
+    }
+
+    .hidden {
+        display: block;
+    }
+
+    .wrapper {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(-135deg, #ffffff, #ffffff);
+        /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+        /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+        clip-path: circle(0px at calc(100% - 45px) 45px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #active:checked~.wrapper {
+        clip-path: circle(75%);
+    }
+
+    .menu-btn {
+        position: fixed;
+        z-index: 100;
+        right: 20px;
+        top: 10px;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #active:checked~.menu-btn {
+        color: #000000;
+    }
+
+    #active:checked~.menu-btn i:before {
+        content: "\f00d";
+    }
+
+    .wrapper ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+        padding: 0 !important;
+    }
+
+    .wrapper ul li {
+        margin: 0;
+        padding: 0 !important;
+    }
+
+    .wrapper ul li a {
+        color: none;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: 500;
+        padding: 5px 30px;
+        color: #000000;
+        position: relative;
+        line-height: 30px;
+        transition: all 0.3s ease;
+    }
+
+    .wrapper ul li a:after {
+        position: absolute;
+        content: "";
+        background: #fff;
+        width: 100%;
+        height: 50px;
+        left: 0;
+        border-radius: 50px;
+        transform: scaleY(0);
+        z-index: -1;
+        transition: transform 0.3s ease;
+    }
+
+    .wrapper ul li a:hover:after {
+        transform: scaleY(1);
+    }
+
+    .wrapper ul li a:hover {
+        color: #4158d0;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    .mobile-reviews {
+        display: block;
+    }
+
+    .reviews {
+        display: none;
+    }
+    
+
+}
 
 @media only screen and (max-width: 600px) {
+    .carousel {
+        z-index: -1;
+    }
+    h1 {
+        font-size: 1.4rem;
+    }
+    .header-video {
+        height: 80vh;
+    }
+
+    .container-fluid {
+        padding: 0px 20px;
+    }
+
     .top-banner {
         position: relative;
         z-index: -1;
@@ -109,17 +313,9 @@ nav {
         background-size: cover;
         background-repeat: no-repeat;
     }
+
     .header-text {
         width: 70%;
-    }
-    .laptop-video {
-        display: none;
-    }
-    video {
-        width: 100%;
-    }
-    .mobile-video {
-        display: block;
     }
 
     .white-button {
@@ -137,13 +333,16 @@ nav {
     .reviews {
         display: none;
     }
+    .banner-2 {
+        background-image: url(static-img/banner-2.jpeg);
+        height: 30vh;
+        background-position: 62% 38%;
+    }
 
     .contact-banner {
         padding-top: 50px;
-        height: 30vh;
         position: relative;
         z-index: -1;
-        background-image: url(static-img/banner-1.jpeg);
         background-size: cover;
         background-position: 40% 60%;
         background-repeat: no-repeat;
