@@ -301,6 +301,10 @@ nav {
     .header-video {
         height: 80vh;
     }
+    .laptop-video {
+        z-index: -1;
+        position: relative;
+    }
 
     .container-fluid {
         padding: 0px 20px;
