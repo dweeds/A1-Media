@@ -54,82 +54,110 @@
     </ul>
   </div>
 
-  <section class="top-banner top-banner-3 mb-5">
+  <div class="top-banner top-banner-3 mb-5">
     <div class="position-absolute top-50 start-50 translate-middle header-text text-center">
       <h1>WHAT WE ARE GOOD AT</h1>
     </div>
-  </section>
+  </div>
 
-  <section class="top-text mb-5">
+  <div class="top-text mb-5">
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 text-start">
-          <p> Our vision is to create a world-class, reliable working platform between brands and the public. Our core
+          <p id="typewriter"> Our vision is to create a world-class, reliable working platform between brands and the
+            public. Our core
             values are diligence, integrity, innovation, passion, and teamwork.
           </p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="projects mb-lg-5 mb-3">
+  <div class="projects mb-lg-5 mb-3">
     <div class="container-fluid text-start">
       <div class="row g-2">
         <div class="col-12 col-lg-6">
           <div class="p-lg-3 py-2">
-            <h6>ARTIST BOOKINGS</h6>
-            We can book any of your desired Nigerian artists for your various events anywhere across the world at the
-            best rate with stress free engagement, management and co-ordination.
+            <h3>ARTIST BOOKINGS</h3>
+            <p id="typewriter">We can book any of your desired Nigerian artists for your various events anywhere across the world at the
+            best rate with stress free engagement, management and co-ordination.</p>
             <p></p>
           </div>
         </div>
         <div class="col-12 col-lg-6">
           <div class="p-lg-3 py-2">
-            <h6>ASSET & CONTENT CREATION</h6>
+            <h3>ASSET & CONTENT CREATION</h3>
 
-            Our in-house photography, videography and editing team produce cutting-edge social media assets for your
-            brand, which can be optimised for each platform that you work with. whether you need campaign photos, an
-            original branded video or repurposed influencer content - we've got you covered. Photo shoots, Brand
-            Bible/Guidelines, Social Media Calendars,Electronic Press Kit, Look Books, Websites etc
+            <p id="typewriter">Our in-house photography, videography and editing team produce cutting-edge social media
+              assets for your
+              brand, which can be optimised for each platform that you work with. whether you need campaign photos, an
+              original branded video or repurposed influencer content - we've got you covered. Photo shoots, Brand
+              Bible/Guidelines, Social Media Calendars,Electronic Press Kit, Look Books, Websites etc</p>
 
           </div>
         </div>
         <div class="col-12 col-lg-6">
           <div class="p-lg-3 py-2">
-            <h6>CRISIS MANAGEMENT</h6> We are very prompt in Identifying, Measuring, Monitoring, Fixing, Repairing,
-            Preventing, Response Management etc
+            <h3>CRISIS MANAGEMENT</h3> <p id="typewriter"> We are very prompt in Identifying, Measuring, Monitoring, Fixing, Repairing,
+            Preventing, Response Management etc</p>
           </div>
         </div>
         <div class="col-12 col-lg-6">
           <div class="p-lg-3 py-2">
-            <h6>PUBLIC AND MEDIA RELATIONS</h6>Our dedicated creative strategists and content team work together to
+            <h3>PUBLIC AND MEDIA RELATIONS</h3>  <p id="typewriter">Our dedicated creative strategists and content team work together to
             build a game plan that will amplify your story and meaningfully grow your online presence. We work to secure
             positive media coverage and exposure for your brand, leveraging our relationships with key journalists and
-            influencers to get your story told.
+            influencers to get your story told.</p>
           </div>
         </div>
         <div class="col-12 col-lg-6">
           <div class="p-lg-3 py-2">
-            <h6>SOCIAL MEDIA ADS & CAMPAIGNS</h6>We develop and execute social media strategies that engage your target
+            <h3>SOCIAL MEDIA ADS & CAMPAIGNS</h3> <p id="typewriter"></p>We develop and execute social media strategies that engage your target
             audience, build brand awareness, and drive business results.
           </div>
         </div>
         <div class="col-12 col-lg-6">
           <div class="p-lg-3 py-2">
-            <h6>REPORTING</h6>Our reports measure how audiences are engaging with your social presence and provide you
+            <h3>REPORTING</h3>
+            <p id="typewriter">Our reports measure how audiences are engaging with your social presence and provide you
             with a clear understanding of the key performance metrics that are most important to you. we analyse trends
             in your audience growth, demographics, and interactions to continuously improve our strategies and maximise
-            your roi.
+            your roi.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="contact-banner banner-2 text-center ">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll("#typewriter");
+      const speed = 20; // Typing speed in milliseconds
+
+      elements.forEach(element => {
+        const text = element.innerHTML;
+        element.innerHTML = "";
+        let index = 0;
+
+        function typeWriter() {
+          if (index < text.length) {
+            element.innerHTML += text.charAt(index);
+            index++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+
+        typeWriter();
+      });
+    });
+  </script>
+
+
+
+  <div class="contact-banner banner-2 text-center ">
     <button class="white-button position-absolute top-50 start-50 translate-middle header-text text-center">LETS HANDLE
       YOUR NEXT PROJECT</button>
-  </section>
+  </div>
 
   <footer>
     <div class="container-fluid p-3 text-center">
